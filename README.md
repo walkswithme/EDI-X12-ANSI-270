@@ -3,13 +3,13 @@ PHP Library for creating EDI X12 ANSI 270 File 5010 Version
 
 A Simple PHP function for creating an EDI X12 ANSI 270 file version 005010X279A1
 
-<a href="https://www.edibasics.com/what-is-edi/" target="_blank">EDI Transactions</a>
+* <a href="https://www.edibasics.com/what-is-edi/" target="_blank">EDI Transactions</a>
 
-<a href="http://www.x12.org/examples/" target="_blanl">X12 Examples</a>
+* <a href="http://www.x12.org/examples/" target="_blanl">X12 Examples</a>
 
 ## How To use
-`
-$res[] =   [
+``````````````````
+	$res[] =   [
 					'tansaction_id' => '000001' 			/*Unique Transaction ID for each request */
 					,'date_of_service' => '20171028'        /* Date Of service */ 
 					,'subscriber_lname' => '***'			/* Subscriber/Patient last name */ 
@@ -25,13 +25,12 @@ $res[] =   [
 					,'x12_version' => '005010X279A1'
 					,'payer_name' => '****'				/* Insurance Payer Name*/
 				];
-
 	
 
 	createEDIFile($res,$segTer,$compEleSep);
 	echo "270 File is Ready !";
+``````````````````
 
-`
 
 The output file generated have a valid X12 EDI ANSI 270 file , just send the file to your insurance wharehouse
 
