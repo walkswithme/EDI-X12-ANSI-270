@@ -7,8 +7,8 @@ A Simple PHP function for creating an EDI X12 ANSI 270 file version 005010X279A1
 
 <a href="http://www.x12.org/examples/" target="_blanl">X12 Examples</a>
 
-**How To use
-
+## How To use
+`
 $res[] =   [
 					'tansaction_id' => '000001' 			/*Unique Transaction ID for each request */
 					,'date_of_service' => '20171028'        /* Date Of service */ 
@@ -24,10 +24,17 @@ $res[] =   [
 					,'payer_code' => '***' 				/* Insurance Payer Code*/
 					,'x12_version' => '005010X279A1'
 					,'payer_name' => '****'				/* Insurance Payer Name*/
-
 				];
 
 	
 
 	createEDIFile($res,$segTer,$compEleSep);
 	echo "270 File is Ready !";
+
+`
+
+The output file generated have a valid X12 EDI ANSI 270 file , just send the file to your insurance wharehouse
+
+Happy Coding :) 
+
+###### What Next ? Looking for 837P ? yep its ready will publish soon.
